@@ -1,6 +1,8 @@
 # NOS PIDEN LA RELACION que hay entre los 6 "objetos" que nos dan
 # Todos los objetos que hay que crear son animales, por tanto MINIMO
-# cada objeto va a heredar ATRIBUTOS de  algun objeto
+# cada objeto va a heredar ATRIBUTOS de algun objeto
+# ---> Todos los animales no son iguales cada unop tiene sus propias caracteristicas que hagan
+# que se diferencien de ootros.
 class Animal():  # Creacion de la clase Animal que nunca crea un objeto pq no
     # se inicializa.
     # Superclase o clase base
@@ -9,13 +11,16 @@ class Animal():  # Creacion de la clase Animal que nunca crea un objeto pq no
         self.name = name
 
 
-class Mamifero(Animal):
-    # Subclase que hereda da la clase base por esoo podemos usar el metodo super
+class Mamifero(Animal): # Un mamifero es un animal --> Hereda atributoos de Animal
+                        # Hasta la propia descripcion de wikipedia nos dice que:
+                        # Mamifero es una clase de animal
+    # Subclase que hereda da la clase BASE por esoo podemos usar el metodo super
     def __init__(self, name):
+        # Super nos permite acceder desde la subclase a metodos o atributos de la clase base.
         super().__init__(self, name)
 
 
-class Oviparo(Animal):
+class Oviparo(Animal): # Un oviparo es un animal  ---> Hereda caracteristicas  de ASnimal
     # Subclase que hereda da la clase base por eso podemos usar el metodo super
     def __init__(self, name):
         super().__init__(self, name)

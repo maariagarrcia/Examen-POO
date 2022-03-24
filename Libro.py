@@ -1,6 +1,11 @@
 #### C L A S E
 # Se define una clase Libro, es  decir, una plantilla para la  psoteriior creación del objetoo cuando
 # se instancie.
+# Una clase es una estructura general del objeto. Por ejemplo, puede 
+# decir que la clase Libro necesita tener una titulo, un autor, una fecha y 
+# un editorial, un ISBN, pero no va a decir cual es titulo, un autor, una fecha y 
+# un editorial, un ISBN, es aquí donde entran las instancias,
+# que haran que salgan cuales son, pq lo pasas por parametro. 
 
 class Libro():  # Declaramos la clase Libro su la plantilla ya que 
                 #  hasta que no lo instanciemos no se creará el objeto/instancia

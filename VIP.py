@@ -1,12 +1,12 @@
-##### I M P O R T S
+# I M P O R T S
 from CuentaBancaria import CuentaBancaria
 from colorama import Fore
 
 
-##### C L A S E
+# C L A S E
 # Creamos la subclase VIP que hereda de CuentaBancaria con sus atributos
 class VIP(CuentaBancaria):  # Uso de la herencia, uso de los atributos de CuentaBancaria
-                            # que pueden ser modificados 
+    # que pueden ser modificados
     def __init__(self, id, titular, fecha, numerocuenta, saldo, negativo):
         CuentaBancaria.__init__(self, id, titular, fecha, numerocuenta, saldo)
         self.negativo = negativo

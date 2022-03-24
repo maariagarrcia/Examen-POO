@@ -9,11 +9,14 @@ from CuentaBancaria import CuentaBancaria, fechatostring, compararfechas
 #               ENTONCES ademas del dinero a retirar se penaliza con un 5% adicional.
 #       SINO QUE DEVUELVA EL metodo creado  en cuenta bancaria que calculara el dinero que queda.
 # Se define la clase APlazoFijo que hereda atributos de cuentabancaria
+
+
 class APlazoFijo(CuentaBancaria):
     def __init__(self, id, titular, fecha, numerocuenta, saldo, vencimiento):
         CuentaBancaria.__init__(self, id, titular, fecha, numerocuenta, saldo)
         self.vencimiento = vencimiento
     # Cambia metodos de la clase base
+
     def retirardinero(self, dinero, fechaactual):
         if(compararfechas(fechaactual, self.vencimiento) < 0):
             dinero = dinero*1.05

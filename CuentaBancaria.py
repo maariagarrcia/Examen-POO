@@ -1,11 +1,11 @@
-### I M P O R T S
+#### I M P O R T S
 import random
 from colorama import Fore
 
 
-### C L A S E
+#### C L A S E
 
-# Cuenta bancaria sera nuestar clase base 
+# Cuenta bancaria sera nuestar clase base
 # Se crea la clase CuentaBancaria, es decir, una plantilla para posteriormente coon el costructor
 # inicializarlo y crear el objeto.
 # Cada objetoo tiene sus respectivas caracteristicas.
@@ -13,21 +13,22 @@ from colorama import Fore
 class CuentaBancaria():
     # Metodo constructor con sus parametros
     # Hay dos tipos de atributos:
-    #           1) LOS DE INSTANCIA --->Pertenecen a la instancia de la clase o al objeto. 
+    #           1) LOS DE INSTANCIA --->Pertenecen a la instancia de la clase o al objeto.
     #                                   Son atributos particulares de cada instancia, en nuestro caso de cada perro.
 
-    #           2) LOS DE CLASES ---> Se trata de atributos que pertenecen a la clase, por 
+    #           2) LOS DE CLASES ---> Se trata de atributos que pertenecen a la clase, por
     #                                 lo tanto serán comunes para todos los objetos.
-    
-    def __init__(self, id, titular, fecha, numerocuenta, saldo): # Los atributos de instancia para nuestra cuenta bancaria
+
+    # Los atributos de instancia para nuestra cuenta bancaria
+    def __init__(self, id, titular, fecha, numerocuenta, saldo):
         self.id = id
         self.titular = titular
         self.fecha = fecha
         self.numerocuenta = numerocuenta
         self.saldo = saldo
 
-    # Los métodos que permiten acceder al valor de un atributo se denominan "getters". 
-    # Los que dan y guardan el valor de un atributo se denominan "setters". 
+    # Los métodos que permiten acceder al valor de un atributo se denominan "getters".
+    # Los que dan y guardan el valor de un atributo se denominan "setters".
     # A partir de aqui empezamos a definirlos
     def setid(self, id):
         self.id = id
@@ -69,31 +70,32 @@ class CuentaBancaria():
             self.saldo = self.saldo-dinero
         else:
             print(Fore.RED + "Error, quiere retirar más dinero del que tienes"+Fore.WHITE)
-    
+
     def ingresardinero(self, dinero):
         # El dinero que se ingresa en una cuenta bancaria se suma al que ya había --->  El saldo
         # actual CAMBIA ---> Despues de ingresar dinero hay que sumarselo al que  ya disponiamos.
         self.saldo = self.saldo+dinero
 
-    def transferirdinero(self, dinero, cuenta): 
+    def transferirdinero(self, dinero, cuenta):
         # Cuando tranferimos dinero lo retiramos de la cuenta ---> Pasa lo mismo que en el metodo retirardinero.
-        # --->      SI nuestro dinero disminuye al que hagamos la  tranferencia aumentara, es decir, el dinero de la 
+        # --->      SI nuestro dinero disminuye al que hagamos la  tranferencia aumentara, es decir, el dinero de la
         # cuenta bancaria de otra persona recalculará su saldo en su cuenta
         #           SINO  pasará igual que  en retirar dinero---> No  se puede extraer mas dinero del que no se tiene
         if (self.saldo >= dinero):
             self.saldo = self.saldo-dinero
             cuenta.saldo = cuenta.saldo+dinero
         else:
-            print(Fore.RED + "Error, quiere transferir más dinero del que tienes"+ Fore.WHITE)
+            print(
+                Fore.RED + "Error, quiere transferir más dinero del que tienes" + Fore.WHITE)
 
     def cuenta(self):
         # Lo que va adevolver este metodo por pantalla cuandose inicialice
-        return  "Cuenta bancaria: " + Fore.GREEN +  str(self.id) + Fore.WHITE +  " Saldo: " + Fore.GREEN + str(self.saldo)+ Fore.WHITE
+        return "Cuenta bancaria: " + Fore.GREEN + str(self.id) + Fore.WHITE + " Saldo: " + Fore.GREEN + str(self.saldo) + Fore.WHITE
 
 
 def esBisiesto(año):
-    # Para  que un año sea bisiesto (de la wikipedia):Año bisiesto es el divisible entre 4, 
-    # salvo que sea año secular -último de cada siglo, terminado en «00»-, 
+    # Para  que un año sea bisiesto (de la wikipedia):Año bisiesto es el divisible entre 4,
+    # salvo que sea año secular -último de cada siglo, terminado en «00»-,
     # en cuyo caso también ha de ser divisible entre 400.
     # Se crea un codigo con coondiciones
     # POR LO TANTO PARA QUE UN AÑO SEA BISIESTO TENDRAN QUE PASAR DOS C0SAS--->
@@ -109,7 +111,7 @@ def esBisiesto(año):
     return Bisiesto
 
 
-def escribirfecha(): 
+def escribirfecha():
     # Se elige aleatooriamente una fecha
     año = random.randint(2021, 2050)
     mes = random.randint(1, 12)
@@ -130,18 +132,18 @@ def escribirfecha():
 
 def fechatostring(fecha):
     # Ordena la fecha y la devuelve
-    return  str(fecha[2])+"/"+str(fecha[1])+"/"+str(fecha[0])
+    return str(fecha[2])+"/"+str(fecha[1])+"/"+str(fecha[0])
 
 
 def compararfechas(fecha1, fecha2):
     # SE EMPIEZAN A COMPARAR LAS FECHAS
     # En fechamenor comparamos dos fechas y se llega a la fecha menor
     # Por lo tanto añadimos la funcion que calcula el menoro entre esos dos
-    # 
+    #
     fecha3 = fechamenor(fecha1, fecha2)
     # SI fecha 1 es diferente que la menor ---> devuelve 1
-    # PUES SI fecha 2 es diferente que fecha 3 ---> devuelve un -1 
-    # SINO DEVUELVE UN 0 
+    # PUES SI fecha 2 es diferente que fecha 3 ---> devuelve un -1
+    # SINO DEVUELVE UN 0
     if(fecha1 != fecha3):
         return 1
     elif(fecha2 != fecha3):
@@ -174,7 +176,7 @@ def fechamenor(fecha1, fecha2):
             else:
                 #mayor = fecha1
                 menor = fecha2
-    return menor # TE DEVUELVE LA MENOR FECHA ENTRE FECHA 1 Y FECHA 2
+    return menor  # TE DEVUELVE LA MENOR FECHA ENTRE FECHA 1 Y FECHA 2
 
 
 def crearnumero():

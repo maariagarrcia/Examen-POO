@@ -2,8 +2,9 @@
 # Se define una clase Libro, es  decir, una plantilla para la  psoteriior creación del objetoo cuando
 # se instancie.
 
-class Libro():  # Declaramos la clase Libro, la platilla.
-    def __init__(self, titulo, autor, fecha, editorial, ISBN):  # Definimos los parámetros en el constructor
+class Libro():  # Declaramos la clase Libro su la plantilla ya que 
+                #  hasta que no lo instanciemos no se creará el objeto/instancia
+    def __init__(self, titulo, autor, fecha, editorial, ISBN):  # Definimos los parámetros, atributos que son particulares para cada objeto creado con esa clase.
         self.titulo = titulo
         self.autor = autor
         self.fecha = fecha
@@ -14,7 +15,6 @@ class Libro():  # Declaramos la clase Libro, la platilla.
     # para garantizar el principio de la encapsulación de datos.
     # Setters: dar un valor y guardarlo en el objeto
     # Los métodos que permiten acceder al valor de un atributo se denominan "getters".
-
     def setTitulo(self, titulo):
         self.titulo = titulo
 
@@ -51,3 +51,11 @@ class Libro():  # Declaramos la clase Libro, la platilla.
 # l.setAutor("Yo")
 
 # print(l.autor)
+# l = Libro("titulo", "autor", "fecha", editorial, ISBN)
+# l.setAutor("After")
+# l.setAutor("Anna Ted")
+# l.setAutor("febrero del 2000")
+# l.setAutor("Burbuja")
+# l.setAutor("9486426538")
+
+

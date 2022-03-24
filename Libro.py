@@ -1,4 +1,4 @@
-# C L A S E
+#### C L A S E
 # Se define una clase Libro, es  decir, una plantilla para la  psoteriior creación del objetoo cuando
 # se instancie.
 
@@ -51,7 +51,8 @@ class Libro():  # Declaramos la clase Libro su la plantilla ya que
 # l.setAutor("Yo")
 
 # print(l.autor)
-# l = Libro("titulo", "autor", "fecha", editorial, ISBN)
+#l = Libro("titulo", "autor", "fecha", "editorial", "ISBN")
+
 # l.setAutor("After")
 # l.setAutor("Anna Ted")
 # l.setAutor("febrero del 2000")

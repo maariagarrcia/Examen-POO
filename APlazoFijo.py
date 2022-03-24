@@ -10,7 +10,6 @@ from CuentaBancaria import CuentaBancaria, fechatostring, compararfechas
 #       SINO QUE DEVUELVA EL metodo creado  en cuenta bancaria que calculara el dinero que queda.
 # Se define la clase APlazoFijo que hereda atributos de cuentabancaria
 
-
 class APlazoFijo(CuentaBancaria):
     def __init__(self, id, titular, fecha, numerocuenta, saldo, vencimiento):
         CuentaBancaria.__init__(self, id, titular, fecha, numerocuenta, saldo)

@@ -1,6 +1,8 @@
-
-class Animal(): #Creacion de la clase Animal que nunca crea un objeto pq no 
-                # se inicializa.
+# NOS PIDEN LA RELACION que hay entre los 6 "objetos" que nos dan
+# Todos los objetos que hay que crear son animales, por tanto MINIMO
+# cada objeto va a heredar ATRIBUTOS de  algun objeto
+class Animal():  # Creacion de la clase Animal que nunca crea un objeto pq no
+    # se inicializa.
     # Superclase o clase base
     # Creación del coonstructor don su paramentro
     def __init__(self, name):
@@ -33,7 +35,11 @@ class Ornitorrinco(Mamifero, Oviparo):
         Oviparo.__init__(self, name)
 
 
-class Pollo(Oviparo): 
+class Pollo(Oviparo):
     # Subclase que hereda de ptra clase
     def __init__(self, name):
         Oviparo.__init__(self, name)
+
+
+# a = Animal("nomrbe")
+# print(a.name)

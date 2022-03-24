@@ -16,6 +16,7 @@ class VIP(CuentaBancaria):  # Uso de la herencia, uso de los atributos de Cuenta
     # dinero que esté en negativoo ---> DINERO QUE REALMENTE NO TIENES
     # Por lo tanto se calculara TODO igualq ue en la clase CuentaBancaria pero teniendo en cuenta
     # realmente que hay que quitarle el dinero en NEGATIVO al saldo.
+
     def retirardinero(self, dinero):
         if(self.saldo+self.negativo >= dinero):
             self.saldo = self.saldo-dinero

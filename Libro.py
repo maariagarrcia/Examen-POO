@@ -50,6 +50,10 @@ class Libro():  # Declaramos la clase Libro su la plantilla ya que
     def getISBN(self):
         return self.ISBN
 
+###
+#   I N I C I O    P R O G R A M A
+##
+
 # Probar si funciona a la hora de instanciarlo
 # l = Libro("Marrón", "claro", "Golden retriever", 1, 4)
 
